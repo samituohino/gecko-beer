@@ -8,7 +8,7 @@ $todaysDate = date('Y-m-d');
 $todaysTime = date('H:i:s');
 $today = "$todaysDate $todaysTime";
 
-if ( date('l', strtotime( $todaysDate) === "$beerDay") &&
+if ( date('l', strtotime($todaysDate)) === $beerDay &&
     strtotime($beerTime) >= strtotime($todaysTime) ) {
     $nextDate = date("Y-m-d $beerTime", strtotime('today'));
 }
